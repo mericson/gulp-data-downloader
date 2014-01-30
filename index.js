@@ -18,11 +18,7 @@ module.exports = function(files){
 		var url;
 		var fileName; 
 
-    console.log( file )
-    console.log( typeof file )
-
 		if ( typeof file == 'object' ) {
-      console.log( 1111 )
       url = file.url;
       if ( file.path ) {
         fileName = file.path
@@ -30,14 +26,12 @@ module.exports = function(files){
         fileName = file.url.split("/").pop();
       }
     } else {
-            console.log( 2222 );
 
       url = file;
       fileName = file.split("/").pop();
     }
 
-    console.log( url );
-    console.log( fileName );
+    gutil.log( 'Downloading ' + gutil.colors.cyan(url)+' to ', gutil.colors.magenta(fileName));
 
 		request(url,function(err,res,body){
 			if(err){
