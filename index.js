@@ -41,7 +41,7 @@ module.exports = function(files){
 
 		request(url,function(err,res,body){
 			if(err){
-				gutil.log(gutil.colors.red('Error'), 'in Plugin', '\''+gutil.colors.cyan('gulp-download')+'\'', ': Failed downloading file', gutil.colors.magenta(file), 'skipping download');
+				gutil.log(gutil.colors.red('Error'), 'in Plugin', '\''+gutil.colors.cyan('gulp-download')+'\'', ': Failed downloading file', gutil.colors.magenta(url), 'skipping download');
 			}else{
 				stream.write(new gutil.File({
 					path: fileName,

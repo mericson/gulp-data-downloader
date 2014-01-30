@@ -1,6 +1,6 @@
 {
   "name": "gulp-data-downloader",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "gulp plugin to download some data",
   "main": "index.js",
   "scripts": {
