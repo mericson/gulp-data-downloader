@@ -18,6 +18,9 @@ module.exports = function(files){
 		var url;
 		var fileName; 
 
+    console.log( file )
+    console.log( typeof file )
+    
 		if ( typeof file == 'object' ) {
       url = file.url;
       if ( file.path ) {
