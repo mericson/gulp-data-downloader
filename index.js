@@ -20,7 +20,7 @@ module.exports = function(files){
 
     console.log( file )
     console.log( typeof file )
-    
+
 		if ( typeof file == 'object' ) {
       url = file.url;
       if ( file.path ) {
@@ -32,6 +32,9 @@ module.exports = function(files){
       url = file;
       fileName = file.split("/").pop();
     }
+
+    console.log( url );
+    console.log( fileName );
 
 		request(url,function(err,res,body){
 			if(err){
